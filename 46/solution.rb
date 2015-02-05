@@ -1,5 +1,6 @@
 t0 = Time.now
-require 'prime'
+
+require 'prime'require 'mathn'
 
 class Problem46
 
@@ -31,15 +32,14 @@ class Problem46
 		false
 	end
 
-
 	def find
-		num =33
+		num = 33
 		while true 
-			if num%2 != 0 && !Prime.prime?(num) && !conjecture?(num) 
+			if num % 2 != 0 && !Prime.prime?(num) && !conjecture?(num) 
 				puts num
 				break
 			end
-		  num+=1
+		  num+=2
 		end
 	end
 end
